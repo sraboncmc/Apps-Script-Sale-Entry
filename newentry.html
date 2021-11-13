@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PMC CPanel</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://pmcctg.web.app/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+
+  </head>
+  <body>
+  <p>Hello <b><?= name ?></b>,</p>
+	<div class="row">
+	<form class="col s12 filForm">
+		<div class="col s12 m6">
+		  <div class="card blue-grey darken-1">
+			<div class="card-content white-text">
+			  <span class="card-title">New Entry</span>
+				<div class="row">
+					<div class="input-field col s6">
+					  <input id="mr_no" type="number" class="validate">
+					  <label for="mr_no">Money Receipt No</label>
+					</div>
+					<div class="input-field col s6">
+					  <input disabled value="Auto Pick after submit" id="disabled" type="text" class="validate">
+					  <label for="disabled">Entry time</label>
+					</div>
+					<div class="input-field col s8">
+					  <input id="pt_name" type="text" class="validate">
+					  <label for="pt_name">Name</label>
+					</div>
+					<div class="input-field col s4">
+					  <input id="pt_age" type="number" class="validate">
+					  <label for="pt_age">Age</label>
+					</div>
+					<div class="input-field col s6">
+					  <i class="material-icons prefix">phone</i>
+					  <input id="icon_telephone" type="tel" class="validate">
+					  <label for="icon_telephone">Telephone</label>
+					</div>
+					<div class="input-field col s6">
+					  <i class="material-icons prefix">assignment_ind</i>
+					  <input disabled value="Auto Pick after load" id="icon_staff" type="text" class="validate">
+					  <label for="icon_staff">Staff Name</label>
+					</div>
+					<div class="input-field col s12">
+					  <input id="dr_name" type="text" class="validate">
+					  <label for="dr_name">Referred Doctor</label>
+					</div>
+					<div class="input-field col s6">
+						<select multiple>
+						  <option value="" disabled selected></option>
+						  <option value="1">SWD</option>
+						  <option value="2">UST</option>
+						  <option value="3">EST</option>
+						  <option value="4">TENS</option>
+						  <option value="5">TRACTION</option>
+						  <option value="6">IFT</option>
+						</select>
+						<label>Name of Therapy</label>
+					</div>
+					<div class="input-field col s6">
+					  <input id="id_amount" type="number" class="validate">
+					  <label for="id_amount">Amount</label>
+					</div>
+				  </div>
+				<button class="btn waves-effect waves-light" type="submit">Submit
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+			<div class="card-action">
+			  
+			</div>
+		  </div>
+		</div>
+	</form>
+	</div>
+
+	<!--  Scripts-->
+    <script>
+		$(document).ready(function(){
+			$('select').formSelect();
+		  });
+    </script>
+  </body>
+</html>
+
